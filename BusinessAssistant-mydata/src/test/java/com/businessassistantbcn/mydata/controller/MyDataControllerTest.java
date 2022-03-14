@@ -13,18 +13,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-
+import com.businessassistantbcn.mydata.config.SpringDBTestConfiguration;
 import com.businessassistantbcn.mydata.service.UserService;
 
 @Profile("test")
 @ExtendWith(SpringExtension.class)
 @WebFluxTest(controllers = MydataController.class)
-@ActiveProfiles("test")
+//@ContextConfiguration(classes = { SpringDBTestConfiguration.class })
+@ContextConfiguration
+@PropertySource("classpath:application-test.properties")
+//@ActiveProfiles("test")
 
 class MyDataControllerTest {
 
