@@ -2,7 +2,6 @@ package com.businessassistantbcn.mydata.config;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,12 +12,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
-
 @Configuration
-@EntityScan("com.businessassistantbcn.mydata.entities.*")
-@EnableJpaRepositories("com.magnetoresistance.my-data.repository")
-@PropertySource("classpath:application-test.properties")
+@EnableJpaRepositories(basePackages = "com.businessassistantbcn.mydata.repository")
+@PropertySource("classpath:persistence-test.properties")
 @EnableTransactionManagement
+
 public class SpringDBTestConfiguration {
 
     @Autowired
@@ -28,12 +26,11 @@ public class SpringDBTestConfiguration {
     public DataSource dataSource() {
 
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.driverClassName(env.getProperty("spring.datasource.driverClasName"));
+        dataSourceBuilder.driverClassName(env.getProperty("spring.datasource.driverClassName"));
         dataSourceBuilder.url(env.getProperty("spring.datasource.url"));
         dataSourceBuilder.username(env.getProperty("spring.datasource.user"));
         dataSourceBuilder.password(env.getProperty("spring.datasource.password"));
         return dataSourceBuilder.build();
     }
-
 
 }

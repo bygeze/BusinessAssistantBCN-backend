@@ -46,6 +46,9 @@ class UserSearchesServiceTest {
 	@Mock
 	private ObjectMapper mapper = new ObjectMapper();
 	
+	@Mock
+	private JsonHelper jsonHelper;
+	
 	private Search search = new Search();
 	private Date date = new Date();
 	private SaveSearchRequestDto requestDto = new SaveSearchRequestDto();
@@ -64,7 +67,7 @@ class UserSearchesServiceTest {
 		search.setSearchName("searchName");
 		search.setSearchDetail("detail");
 		search.setSearchResult(mapper.valueToTree(searchResult));
-
+		
 		requestDto.setSearchName("searchName");
 		requestDto.setSearchDetail("detail");
 		requestDto.setSearchResult(mapper.valueToTree(searchResult));
@@ -101,9 +104,7 @@ class UserSearchesServiceTest {
 		assertEquals(requestDto.getSearchName(), savedSearch.block().getSearchName());
 	}
 	
-	@Test
-	//TODO
-	//Me parece que habría que crear los json a mano en lugar de llamar a los métodos del JsonHelper		
+	@Test	
 	final void getAllSearchesOfAUserByUserUuid_shouldReturnAllSearchesWithThatUserUuid() {
 		List<Search> searchList = new ArrayList<Search>();
 		searchList.add(search);
@@ -115,6 +116,7 @@ class UserSearchesServiceTest {
 	        ObjectNode object = (ObjectNode) searchNode;
 	        object.remove("searchResult");
 		}
+		
 		GenericResultDto<JsonNode> genericDto = new GenericResultDto<JsonNode>();
 		genericDto.setCount(1);
 		genericDto.setOffset(0);
@@ -129,8 +131,6 @@ class UserSearchesServiceTest {
 	}
 
 	@Test
-	//TODO
-	//Me parece que habría que crear los json a mano en lugar de llamar a los métodos del JsonHelper
 	void testGetSearchResults() {
 		List<Search> searchList = new ArrayList<Search>();
 		searchList.add(search);
