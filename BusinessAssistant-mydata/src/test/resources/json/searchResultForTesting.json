@@ -1,0 +1,129 @@
+[
+        {
+            "name": "Groupe Zannier Espanya",
+            "web": "http://www.kidilizgroup.com",
+            "email": null,
+            "phone": null,
+            "activities": [
+                {
+                    "id": 1008031,
+                    "name": "Delegacions - oficines comercials"
+                },
+                {
+                    "id": 31821778,
+                    "name": "Groupe Zannier España"
+                }
+            ],
+            "addresses": [
+                {
+                    "street_name": "C Mallorca",
+                    "number": "318",
+                    "zip_code": "08037",
+                    "district_id": "02",
+                    "town": "BARCELONA",
+                    "location": {
+                        "x": 430463.3786189869,
+                        "y": 4583267.060320887
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Fujifilm España S.A.",
+            "web": "http://www.fujifilm.eu/es/",
+            "email": null,
+            "phone": null,
+            "activities": [
+                {
+                    "id": 1008031,
+                    "name": "Delegacions - oficines comercials"
+                },
+                {
+                    "id": 31798950,
+                    "name": "Fujifilm"
+                },
+                {
+                    "id": 29810744,
+                    "name": "Cinema"
+                }
+            ],
+            "addresses": [
+                {
+                    "street_name": "C Aragó",
+                    "number": "180",
+                    "zip_code": "08011",
+                    "district_id": "02",
+                    "town": "BARCELONA",
+                    "location": {
+                        "x": 429620.0300793953,
+                        "y": 4581997.003537545
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Compañia Roca Sanitario",
+            "web": "http://www.roca.es",
+            "email": "infosan@roca.net",
+            "phone": null,
+            "activities": [
+                {
+                    "id": 1008031,
+                    "name": "Delegacions - oficines comercials"
+                },
+                {
+                    "id": 32805741,
+                    "name": "Sanitaris"
+                }
+            ]
+        },
+        {
+            "name": "Empresa Cinesa",
+            "web": "http://www.cinesa.es",
+            "email": "info@cinesa.es",
+            "phone": null,
+            "activities": [
+                {
+                    "id": 1008031,
+                    "name": "Delegacions - oficines comercials"
+                },
+                {
+                    "id": 31821724,
+                    "name": "Cinesa"
+                },
+                {
+                    "id": 29810744,
+                    "name": "Cinema"
+                },
+                {
+                    "id": 32299309,
+                    "name": "Com.men.ptos.pasteleria,bolleria"
+                },
+                {
+                    "id": 35299312,
+                    "name": "Cafe-bar teatros y cines"
+                },
+                {
+                    "id": 66007067,
+                    "name": "Exhibicion de peliculas cinematograficas"
+                },
+                {
+                    "id": 50844509,
+                    "name": "Empreses Exhibició"
+                }
+            ],
+            "addresses": [
+                {
+                    "street_name": "C Rosselló i Porcel",
+                    "number": "21",
+                    "zip_code": "08016",
+                    "district_id": "08",
+                    "town": "BARCELONA",
+                    "location": {
+                        "x": 431566.9980147745,
+                        "y": 4587597.930328518
+                    }
+                }
+            ]
+        }
+    ]
